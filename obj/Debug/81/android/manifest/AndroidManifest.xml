@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.Smart_Closet">
+  <uses-permission android:name="android.permission.BLUETOOTH" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:name="android.app.Application" android:debuggable="true">
+    <activity android:label="DoneActivity" android:name="md56b0c47e56c7b03cbd4eaa6fbdaff0b90.DoneActivity" />
+    <activity android:label="FilterActivity" android:name="md56b0c47e56c7b03cbd4eaa6fbdaff0b90.FilterActivity" />
+    <activity android:label="insertActivity" android:name="md56b0c47e56c7b03cbd4eaa6fbdaff0b90.insertActivity" />
+    <activity android:label="insertExistingActivity" android:name="md56b0c47e56c7b03cbd4eaa6fbdaff0b90.insertExistingActivity" />
+    <activity android:label="insetMainActivity" android:name="md56b0c47e56c7b03cbd4eaa6fbdaff0b90.insertMainActivity" />
+    <activity android:label="@string/app_name" android:theme="@style/AppTheme" android:name="md56b0c47e56c7b03cbd4eaa6fbdaff0b90.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="@string/app_name" android:theme="@style/AppTheme" android:name="md56b0c47e56c7b03cbd4eaa6fbdaff0b90.MainActivity2" />
+    <activity android:label="selectActivity" android:name="md56b0c47e56c7b03cbd4eaa6fbdaff0b90.selectActivity" />
+    <activity android:label="signInActivity" android:name="md56b0c47e56c7b03cbd4eaa6fbdaff0b90.signInActivity" />
+    <activity android:label="signUpActivity" android:name="md56b0c47e56c7b03cbd4eaa6fbdaff0b90.signUpActivity" />
+    <activity android:label="Web Authenticator" android:name="md59c760537790dc8bb2814082f948671c6.FormAuthenticatorActivity" />
+    <activity android:label="Web Authenticator" android:name="md59c760537790dc8bb2814082f948671c6.WebAuthenticatorActivity" />
+    <service android:name="md5dcb6eccdc824e0677ffae8ccdde42930.KeepAliveService" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" android:name="md5d630c3d3bfb5f5558520331566132d97.BatteryBroadcastReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" android:name="md5d630c3d3bfb5f5558520331566132d97.EnergySaverBroadcastReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Connectivity Broadcast Receiver" android:name="md5d630c3d3bfb5f5558520331566132d97.ConnectivityBroadcastReceiver" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:authorities="com.companyname.Smart_Closet.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.companyname.Smart_Closet" />
+      </intent-filter>
+    </receiver>
+  </application>
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
+</manifest>
