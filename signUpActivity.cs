@@ -31,13 +31,9 @@ namespace Smart_Closet
 
                 try
                 {
-                   // SqlConnection connection = new SqlConnection(
-                    //         "Server=tcp:smartclosetdatabase.database.windows.net,1433;Initial Catalog=smartclosetdb;Persist Security Info=False;User ID={HAGATZAR};Password={SCAMO236###};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-                    SqlConnection connection = new SqlConnection(
+                   SqlConnection connection = new SqlConnection(
                             "Data Source = smartclosetdatabase.database.windows.net; Initial Catalog = smartclosetdb; User ID = HAGATZAR; Password = SCAMO236###; Connect Timeout = 30; Encrypt = True; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False;");
                     connection.Open();
-                  //  SqlCommand command = new SqlCommand("CREATE TABLE TESTTTT (ali int);", connection);// INSERT INTO USERS (USERNAME, PWD) VALUES( '" + userName.Text + "' , '" + password.Text + "');", connection);
-
                     SqlCommand command = new SqlCommand("INSERT INTO USERS (USERNAME, PWD) VALUES( '" + userName.Text + "' , '" + password.Text + "');", connection);
                     SqlDataReader reader = command.ExecuteReader();
                 }

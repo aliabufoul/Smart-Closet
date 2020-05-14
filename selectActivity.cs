@@ -70,18 +70,6 @@ namespace Smart_Closet
                         itr++;
                         var picArr = new Byte[(reader.GetBytes(0, 0, null, 0, int.MaxValue))];
                         reader.GetBytes(0, 0, picArr, 0, picArr.Length);
-                        /*
-                        byte[] picArr = new byte[10000000];
-                        picArr = (byte[])reader["IMAGE"];
-                        Console.WriteLine("reader:",reader["IMAGE"]);
-                        Console.WriteLine("test: {0}",test);
-                        Console.WriteLine("picArr: {0}", picArr[0]);
-                        Console.WriteLine("picArr1: {0}", picArr[1]);
-                        test++;
-                       /* long len = reader.GetBytes(1, 0, null, 0, 0);
-                        byte[] picArr = new byte[len];
-
-                        reader.GetBytes(1, 0, picArr, 0, (int)len);*/
                         Bitmap bitmapT = BitmapFactory.DecodeByteArray(picArr, 0, picArr.Length);
                         if(itr==1)
                             imageButton1.SetImageBitmap(bitmapT);
@@ -111,11 +99,7 @@ namespace Smart_Closet
             {
                 // Console.WriteLine(err); //todo
             }
-            //  Bitmap bitmap = BitmapFactory.DecodeByteArray(bitmapdata, 0, bitmapdata.length);
-            /* InputStream inputStream = new ByteArrayInputStream(bytes);
-             BitmapFactory.Options o = new BitmapFactory.Options();
-             BitmapFactory.decodeStream(inputStream, null, o);*/
-            // Create your application here
+
         }
         private async void onClick(int curCell)
         {
@@ -139,78 +123,35 @@ namespace Smart_Closet
         }
         private async void imageButton1_ClickAsync(object sender, EventArgs e)
         {
-            onClick(1);/*
-            await BluetoothHandler.sendAsync(cellArr[0]-1);
-
-            Android.Content.Intent done = new Android.Content.Intent(this, typeof(DoneActivity));
-            done.PutExtra("username", username);
-            done.PutExtra("currCell", cellArr[0]);
-            StartActivity(done);*/
+            onClick(1);
         }
         private async void imageButton2_ClickAsync(object sender, EventArgs e)
         {
-            onClick(2);/*
-            await BluetoothHandler.sendAsync(cellArr[1]-1);
-
-            Android.Content.Intent done = new Android.Content.Intent(this, typeof(DoneActivity));
-            done.PutExtra("username", username);
-            done.PutExtra("currCell", cellArr[1]);
-            StartActivity(done);*/
+            onClick(2);
         }
         private async void imageButton3_ClickAsync(object sender, EventArgs e)
         {
-            onClick(3);/*
-            await BluetoothHandler.sendAsync(cellArr[2]-1);
-
-            Android.Content.Intent done = new Android.Content.Intent(this, typeof(DoneActivity));
-            done.PutExtra("username", username);
-            done.PutExtra("currCell", cellArr[2]);
-            StartActivity(done);*/
+            onClick(3);
         }
         private async void imageButton4_ClickAsync(object sender, EventArgs e)
         {
-            onClick(4);/*            await BluetoothHandler.sendAsync(cellArr[3]-1);
-
-            Android.Content.Intent done = new Android.Content.Intent(this, typeof(DoneActivity));
-            done.PutExtra("username", username);
-            done.PutExtra("currCell", cellArr[3]);
-            StartActivity(done);
-        */}
+            onClick(4);
+		}
         private async void imageButton5_ClickAsync(object sender, EventArgs e)
         {
-            onClick(5);/*  await BluetoothHandler.sendAsync(cellArr[4]-1);
-
-            Android.Content.Intent done = new Android.Content.Intent(this, typeof(DoneActivity));
-            done.PutExtra("username", username);
-            done.PutExtra("currCell", cellArr[4]);
-            StartActivity(done);
-        */}
+            onClick(5);
+		}
         private async void imageButton6_ClickAsync(object sender, EventArgs e)
         {
-            onClick(6);/*  await BluetoothHandler.sendAsync(cellArr[5]-1);
-
-            Android.Content.Intent done = new Android.Content.Intent(this, typeof(DoneActivity));
-            done.PutExtra("username", username);
-            done.PutExtra("currCell", cellArr[5]);
-            StartActivity(done);
-        */}
+            onClick(6);
+		}
         private async void imageButton7_ClickAsync(object sender, EventArgs e)
         {
-            onClick(7);/*  await BluetoothHandler.sendAsync(cellArr[6]-1);
-
-            Android.Content.Intent done = new Android.Content.Intent(this, typeof(DoneActivity));
-            done.PutExtra("username", username);
-            done.PutExtra("currCell", cellArr[6]);
-            StartActivity(done);
-        */}
+            onClick(7);
+		}
         private async void imageButton8_ClickAsync(object sender, EventArgs e)
         {
-            onClick(8);/*  await BluetoothHandler.sendAsync(cellArr[7]-1);
-
-            Android.Content.Intent done = new Android.Content.Intent(this, typeof(DoneActivity));
-            done.PutExtra("username", username);
-            done.PutExtra("currCell", cellArr[7]);
-            StartActivity(done);
-        */}
+            onClick(8);
+		}
     }
 }

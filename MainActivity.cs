@@ -31,9 +31,6 @@ namespace Smart_Closet
             signInBTN.Click += mainSignInBTN_Click;
             signUpBTN.Click += mainSignUpBTN_Click;
 
-            //Button buttonConnect = FindViewById<Button>(Resource.Id.button3);
-            // Button buttonDisconnect = FindViewById<Button>(Resource.Id.button4);
-
             TextView connected = FindViewById<TextView>(Resource.Id.textView1);
 
             BluetoothHandler.connect();

@@ -25,51 +25,14 @@ namespace BluetoothApplication
 
         public static async System.Threading.Tasks.Task sendAsync(int n)
         {
-            /*
-            try
-            {
-                Log.Debug(CLASS_TAG, "sending byte..");
-                myConnection.thisSocket.OutputStream.WriteByte(Convert.ToByte(b));
-                myConnection.thisSocket.OutputStream.Close();
-                System.Threading.Thread.Sleep(10);
-                Log.Debug(CLASS_TAG, "sent byte");
-            }
-            catch (Exception ex)
-            {
-                Log.Debug("BLUETOOTH", ex.Message);
-            }
-            */
-
             UnicodeEncoding uniencoding = new UnicodeEncoding();
             byte[] buffer = uniencoding.GetBytes(n.ToString());
             await myConnection.thisSocket.OutputStream.WriteAsync(buffer, 0, buffer.Length);
 
-            }
+        }
         public static void connect()
         {
             Log.Debug(CLASS_TAG, "connecting..");
-            /*myConnection = new BluetoothConnection();
-            myConnection.getAdapter();
-            myConnection.thisAdapter.StartDiscovery();
-            try
-            {
-                Console.WriteLine("aaa");
-                myConnection.getDevice();
-                Console.WriteLine("bbb");
-                myConnection.thisDevice.SetPairingConfirmation(false);
-                Console.WriteLine("ccc");
-                myConnection.thisDevice.SetPairingConfirmation(true);
-                Console.WriteLine("ddd");
-                myConnection.thisDevice.CreateBond();
-                Console.WriteLine("eee");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("111");
-                Log.Debug("BLUETOOTH", ex.Message);
-                return;
-            }
-            myConnection.thisAdapter.CancelDiscovery();*/
             BluetoothAdapter adapter = BluetoothAdapter.DefaultAdapter;
             if (adapter == null)
                 throw new Exception("No Bluetooth adapter found.");
@@ -101,33 +64,11 @@ namespace BluetoothApplication
 
         }
         public static void disconnect()
-        {/*
-            try
-            {
-                Log.Debug(CLASS_TAG, "disconnecting..");
-                myConnection.thisDevice.Dispose();
-
-                myConnection.thisSocket.OutputStream.WriteByte(187);
-                myConnection.thisSocket.OutputStream.Close();
-
-                myConnection.thisSocket.Close();
-
-                myConnection = new BluetoothConnection();
-                Log.Debug(CLASS_TAG, "disconnected");
-            }
-            catch (Exception ex)
-            {
-                Log.Debug("BLUETOOTH", ex.Message);
-            }
-        */}
+        {
+			
+		}
         private class BluetoothConnection
-        {/*
-            public void getAdapter() { this.thisAdapter = BluetoothAdapter.DefaultAdapter; }
-            public void getDevice() { this.thisDevice = (from bd in this.thisAdapter.BondedDevices where bd.Name == DEVICE_NAME select bd).FirstOrDefault(); }
-            
-            public BluetoothAdapter thisAdapter { get; set; }
-            public BluetoothDevice thisDevice { get; set; }*/
-
+        {
             public BluetoothSocket thisSocket { get; set; }
         }
     }
